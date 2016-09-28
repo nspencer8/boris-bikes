@@ -11,4 +11,8 @@ describe DockingStation do
       bike = @station.release_bike
       expect(bike.working?).to be true
     end
+
+    it "should dock a bike" do
+      expect(@station).to respond_to(:dock_bike)
+    end
 end
