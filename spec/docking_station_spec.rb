@@ -14,5 +14,10 @@ describe DockingStation do
 
     it "should dock a bike" do
       expect(@station).to respond_to(:dock_bike)
+      expect()
+    end
+
+    it "should have a bike" do
+      expect(@station.has_bike?).to be true
     end
 end
