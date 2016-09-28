@@ -6,7 +6,12 @@ class DockingStation
 
 
   def release_bike
-    Bike.new
+      if bike = false
+        fail 'No bikes available'
+      end
+      unless
+        Bike.new
+      end
   end
 
   def dock(bike)

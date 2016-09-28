@@ -7,6 +7,13 @@ describe DockingStation do
     it "Should respond to release bike" do
       expect(@station).to respond_to(:release_bike)
     end
+
+    it "Should raise an error if no bike is available" do
+        if @station.bike == 0
+          expect(@station.release_bike).to raise_error('No bikes available')
+        end
+    end
+
     it "Should get a working bike" do
       bike = @station.release_bike
       expect(bike.working?).to be true
